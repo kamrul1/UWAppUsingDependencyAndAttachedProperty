@@ -6,8 +6,12 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.DataContext>
+        <local:DataSource />
+    </Page.DataContext>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    </Grid>
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <local:HeaderControl Title="Hello World" local:DialogProperties.Text="Goodbye"/>
+        <local:HeaderControl Title="{Binding TitleValue}" local:DialogProperties.Text="{Binding DialogValue}"/>
+    </StackPanel>
 </Page>
